@@ -24,12 +24,12 @@ tamanho_equipe_estudantes = 5
 equipes_estudantes_habilidades = list(combinations(Lista_alunos_habilidades, tamanho_equipe_estudantes))
 melhor_equipe_projeto = None
 melhor_fitness = 0
-total_combinacoes = 0
+numero_combinacoes = 0
 
 inicio = time.time()
 
 for equipes_estudantes in equipes_estudantes_habilidades:
-    total_combinacoes += 1
+    numero_combinacoes += 1
     fitness = 0
     habilidades_equipe_necessarias = set()
 
@@ -58,7 +58,7 @@ horas = minutos / 60
 # Resultados
 print(f"Tempo total: {minutos}:{segundos:.1f}")
 print(f"Melhor fitness: {melhor_fitness}")
-print(f"total de combinações realizadas:{total_combinacoes}")
+print(f"total de combinações realizadas:{numero_combinacoes}")
 print("\nMelhor equipe:")
 
 for equipe_alunos_habilidades in melhor_equipe_projeto:
